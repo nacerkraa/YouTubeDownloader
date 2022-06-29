@@ -1,16 +1,18 @@
 # importing the module
 from pytube import YouTube
 
-# where to save
-SAVE_PATH = "home/nacer/project/python" #to_do
+
 
 # link of the video to be downloaded
-link="https://www.youtube.com/watch?v=xWOoBJUqlbI"
+link="https://www.youtube.com/watch?v=NtzDjNhPZgU"
+
+yt = YouTube("link")
+
+# where to save
+SAVE_PATH = "home/nacer/project/python" 
 
 
-	# object creation using YouTube
-	# which was imported in the beginning
-yt = YouTube(link)
+
 
 
 # filters out all the files with "mp4" extension
