@@ -1,10 +1,10 @@
-def main():
-    from pytube import YouTube
+#import the package
+from pprint import pp
+from pytube import YouTube
 
-    yt = YouTube("https://www.youtube.com/watch?v=7BXJIjfJCsA")
+url = 'https://www.youtube.com/watch?v=7BXJIjfJCsA'
+my_video = YouTube(url)
 
-    print(yt.title)
+print(my_video.title)
 
-if __name__ == "__main__":
-    main()
 
