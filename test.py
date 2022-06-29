@@ -8,27 +8,5 @@ link="https://www.youtube.com/watch?v=NtzDjNhPZgU"
 
 yt = YouTube("link")
 
-# where to save
-SAVE_PATH = "home/nacer/project/python" 
-
-
-
-
-
-# filters out all the files with "mp4" extension
-mp4files = yt.filter('mp4')
-
-#to set the name of the file
-yt.set_filename('GeeksforGeeks Video')
-
-# get the video with the extension and
-# resolution passed in the get() function
-d_video = yt.get(mp4files[-1].extension,mp4files[-1].resolution)
-
-try:
-	# downloading the video
-	d_video.download(SAVE_PATH)
-except:
-	print("Some Error!")
-print('Task Completed!')
+print(yt)
 
