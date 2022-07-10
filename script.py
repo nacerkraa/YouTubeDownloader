@@ -1,10 +1,33 @@
-#import the package
-from pprint import pp
-from pytube3 import YouTube
+# importing the module
+from pytube import YouTube
 
-url = 'https://www.youtube.com/watch?v=7BXJIjfJCsA'
-my_video = YouTube(url)
+# where to save
+SAVE_PATH = "home/nacer/project/python" #to_do
 
-print(my_video.title)
+# link of the video to be downloaded
+link="https://www.youtube.com/watch?v=xWOoBJUqlbI"
+
+
+	# object creation using YouTube
+	# which was imported in the beginning
+yt = YouTube(link)
+
+
+# filters out all the files with "mp4" extension
+mp4files = yt.filter('mp4')
+
+#to set the name of the file
+yt.set_filename('GeeksforGeeks Video')
+
+# get the video with the extension and
+# resolution passed in the get() function
+d_video = yt.get(mp4files[-1].extension,mp4files[-1].resolution)
+
+try:
+	# downloading the video
+	d_video.download(SAVE_PATH)
+except:
+	print("Some Error!")
+print('Task Completed!')
 
 
