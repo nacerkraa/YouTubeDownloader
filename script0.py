@@ -7,7 +7,6 @@ print(f'Downloading: {p.title}')
 for video in p.videos:
 
     print(video.title)
-    if i == 9:
-        st = video.streams.get_highest_resolution()
-        st.download()
-    #video.streams.first().download()
+    st = video.streams.get_highest_resolution()
+    st.download()
+    # video.streams.first().download()
