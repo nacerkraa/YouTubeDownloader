@@ -7,7 +7,7 @@ i = 0;
 for video in p.videos:
     i += 1
     print(video.title)
-    if i == 10:
+    if i >= 10:
         st = video.streams.get_highest_resolution()
         st.download()
     #video.streams.first().download()
