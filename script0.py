@@ -5,9 +5,9 @@ p = Playlist('https://www.youtube.com/playlist?list=PLzMcBGfZo4-kCLWnGmK0jUBmGLa
 print(f'Downloading: {p.title}')
 i = 0;
 for video in p.videos:
-    i += 1
+
     print(video.title)
-    if i >= 10:
+    if i == 9:
         st = video.streams.get_highest_resolution()
         st.download()
     #video.streams.first().download()
