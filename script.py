@@ -8,8 +8,8 @@ link = input("Enter your url: ")
 
 yt = YouTube(link)
 
-yt.streams.filter(only_audio=True)
-stream = yt.streams.get_highest_resolution()
+stream = yt.streams.get_audio_only()
+# stream = yt.streams.get_highest_resolution()
 
 try:
 	stream.download("Home/Downloads")
