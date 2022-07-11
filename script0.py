@@ -3,7 +3,7 @@ from pytube import Playlist
 p = Playlist('https://www.youtube.com/playlist?list=PLzMcBGfZo4-kCLWnGmK0jUBmGLaJxvi4j')
 
 print(f'Downloading: {p.title}')
-i = 0;
+
 for video in p.videos:
 
     print(video.title)
