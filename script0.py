@@ -11,5 +11,5 @@ for video in p.videos:
 
     print(video.title)
     st = video.streams.get_highest_resolution()
-    st.download()
+    st.download("./path")
     # video.streams.first().download()
