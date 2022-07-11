@@ -1,3 +1,4 @@
+# for download playlist
 from pytube import Playlist
 p = Playlist('https://www.youtube.com/playlist?list=PLGo0NLnuNoa-KKJPn8ZBRjksb8jaw4lz-')
 
