@@ -15,7 +15,7 @@ if typeVideo == "y":
 else:
 	stream = yt.streams.get_highest_resolution()
 try:
-	stream.download("Home/Downloads")
+	stream.download("./path")
 except:
 	print("Some Error!")
 
